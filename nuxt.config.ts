@@ -14,4 +14,5 @@ export default defineNuxtConfig({
   css: [
     "~/assets/css/main.scss",
   ],
+  distDir: 'out',
 })
