@@ -1,0 +1,25 @@
+{
+  "hash": "a7205b1a",
+  "browserHash": "6677d74d",
+  "optimized": {
+    "vue": {
+      "src": "../../node_modules/vue/dist/vue.runtime.esm-bundler.js",
+      "file": "vue.js",
+      "fileHash": "44b5c0f2",
+      "needsInterop": false
+    },
+    "ufo": {
+      "src": "../../node_modules/ufo/dist/index.mjs",
+      "file": "ufo.js",
+      "fileHash": "34c49c21",
+      "needsInterop": false
+    },
+    "defu": {
+      "src": "../../node_modules/defu/dist/defu.mjs",
+      "file": "defu.js",
+      "fileHash": "083063ab",
+      "needsInterop": false
+    }
+  },
+  "chunks": {}
+}
