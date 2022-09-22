@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import './fonts.scss';
+
+$colors : (
+  "orange_album":#E9964D,
+  "espresso":#8D5524,
+  "umber":#976631,
+  "black": #181818,
+  "gray2": #58666E,
+  "locked": #D2D2D2
+);
+
+@each $key, $value in $colors {
+  .#{$key} {
+    background: $value;
+    background-color: $value;
+  }
+  .#{$key}--border{
+    border-color: $value;
+  }
+  .#{$key}--text {
+    color: $value;
+  }
+}
+
+body{
+  @apply font-proxima_normal;
+}
+
+
+.btn-primary {
+  @apply py-2 px-4 bg-purple text-white font-semibold rounded-lg shadow-md  focus:outline-none focus:ring-2 focus:ring-opacity-75;
+  font-family: 'Proxima Nova Light';
+}
+
+@mixin  border-radius($radius) {
+  border-radius: $radius;
+}
+
+.title{
+  font-family: 'Proxima Nova';
+}
+
+.btn-blue{
+  @extend .btn-primary;
+  @include border-radius(4px);
+  color: map-get($colors, blue );
+  font-family: 'Proxima Nova Light';
+}
+

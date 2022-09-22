@@ -1,0 +1,11 @@
+@mixin  border-radius($radius) {
+  border-radius: $radius;
+}
+
+.btn-normal {
+  background-color: antiquewhite;
+  @include border-radius(4px);
+}
+.btn-white {
+  @apply h-10 px-6 font-semibold rounded-md border border-slate-200 text-slate-900;
+}
