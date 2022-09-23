@@ -5,3 +5,21 @@
     <slot />
   </div>
 </template>
+<script>
+  export default {
+    loading: false
+  }
+  const route = useRoute()
+useHead({
+   titleTemplate: (titleChunk) => {
+      return titleChunk ? `${titleChunk} - Nuxt Tailwind App` : 'Nuxt Tailwind App';
+    },
+  // or, instead:
+  // titleTemplate: (title) => `My App - ${title}`,
+  viewport: 'width=device-width, initial-scale=1, maximum-scale=1',
+  charset: 'utf-8',
+  meta: [
+    { name: 'description', content: `App Name - ${route.meta.title}` }
+  ],
+})  
+</script>

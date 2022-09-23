@@ -7,5 +7,9 @@
   @include border-radius(4px);
 }
 .btn-white {
-  @apply h-10 px-6 font-semibold rounded-md border border-slate-200 text-slate-900;
+  @apply bg-dark_blue h-10 px-6 font-semibold rounded-md border border-slate-200 text-white;
+}
+
+.btn-info {
+@apply bg-primary py-2 px-4 text-white font-semibold rounded-lg shadow-md;
 }
