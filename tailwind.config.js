@@ -17,6 +17,7 @@ module.exports = {
         proxima_normal: ['Proxima Nova'],
         proxima_bold: ['Proxima Nova Bold'],
         proxima_light: ['Proxima Nova Light'],
+        bellindia: ['Bellindia'],
       },      
       colors: {
         transparent: 'transparent',

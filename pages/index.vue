@@ -1,17 +1,22 @@
 <template>
   <div class="text-center mt-20">
-    <h1 class="text-3xl font-normal text-green-500  cyan--text title">
+    <h1 class="text-3xl font-normal text-green-500  cyan--text title mb-5">
       How to install Tailwind CSS 3 in Nuxt 3
     </h1>
-    <p class="font-proxima_light">This is lorem ipsum text</p>
+   
+    <p class="font-bellindia text-4xl mb-5">This is lorem ipsum text</p>
     <button class="btn-primary">Submit</button>
     <button class="btn-info">Submit</button>
+   
     <ul class="mt-10">
       <li v-for="user in users" :key="user.id">{{user.name}}</li>
     </ul>
     <ul class="mt-10 servier-side">
       <li class="font-proxima_bold" v-for="user in users2" :key="user.id">{{user.name}}</li>
-    </ul>    
+    </ul>   
+
+
+ 
   </div>
 </template>
 
