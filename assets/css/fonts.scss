@@ -27,3 +27,13 @@
   font-weight: 400;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'Bellindia';
+  src: local('Bellindia'), local('Bellindia'),
+      url('../fonts/Bellindia.woff2') format('woff2'),
+      url('../fonts/Bellindia.woff') format('woff'),
+      url('../fonts/Bellindia.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}

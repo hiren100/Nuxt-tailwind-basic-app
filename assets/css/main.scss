@@ -1,6 +1,6 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 @import './fonts.scss';
 
 $colors : (
@@ -29,11 +29,12 @@ body{
   @apply font-proxima_normal;
 }
 
-
 .btn-primary {
-  @apply py-2 px-4 bg-purple text-white font-semibold rounded-lg shadow-md  focus:outline-none focus:ring-2 focus:ring-opacity-75;
+  @apply bg-pink-500 py-2 px-4  text-white font-semibold rounded-lg shadow-md  focus:outline-none focus:ring-2 focus:ring-opacity-75;
   font-family: 'Proxima Nova Light';
 }
+
+
 
 @mixin  border-radius($radius) {
   border-radius: $radius;

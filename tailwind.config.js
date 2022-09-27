@@ -1,5 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 
+const colors = require('tailwindcss/colors')
+
 module.exports = {
   darkMode: 'class',
   content: [
@@ -15,18 +17,19 @@ module.exports = {
         proxima_normal: ['Proxima Nova'],
         proxima_bold: ['Proxima Nova Bold'],
         proxima_light: ['Proxima Nova Light'],
+        bellindia: ['Bellindia'],
       },      
       colors: {
-        'blue': '#1fb6ff',
-        'purple': '#7e5bef',
-        'pink': '#ff49db',
-        'orange': '#ff7849',
-        'green': '#13ce66',
-        'yellow': '#ffc82c',
-        'gray-dark': '#273444',
-        'gray': '#8492a6',
-        'gray-light': '#d3dce6',
-        'white': '#fff'
+        transparent: 'transparent',
+        current: 'currentColor',
+        black: colors.black,
+        white: colors.white,
+        gray: colors.gray,
+        emerald: colors.emerald,
+        indigo: colors.indigo,
+        yellow: colors.yellow,
+        primary: "#268ECD",
+        dark_blue:"#203C72"
       },      
       spacing: {
         '8xl': '96rem',

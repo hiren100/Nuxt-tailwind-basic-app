@@ -8,9 +8,15 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
+    "@nuxtjs/pwa": "^3.3.5",
     "@nuxtjs/tailwindcss": "^5.3.3",
     "nuxt": "3.0.0-rc.11",
     "sass": "^1.55.0",
-    "sass-loader": "10.1.1"
+    "sass-loader": "10.1.1",
+    "vite-plugin-pwa": "^0.13.1"
+  },
+  "dependencies": {
+    "v-lazy-image": "^2.1.1",
+    "vue3-carousel": "^0.1.46"
   }
 }

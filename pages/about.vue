@@ -1,34 +1,35 @@
 <template>
 <div class="container lg:container mx-auto text-center">
   <h1 class="text-2xl font-bold orange_album--text text-center">this is main about us</h1>
-  <!-- <img src="avatar-anisha.png" alt=""/> -->
-  <img src="/img/avatar-anisha.png" alt="Discover Nuxt 3" />
-  <button class="btn-normal">Submit</button>
+
+  
+   <v-lazy-image src="https://images.unsplash.com/photo-1664021029310-bc881e4ebb22" src-placeholder="https://picsum.photos/seed/picsum/200/300" />
+
+
+  <button class="btn-white">Submit</button>
+  <hr/>
+  <button class="btn-info">Submit</button>
+  
   <PostItem v-for="n in 10" :key="n" />
 </div>
 </template>
 
-<style src="~/assets/css/helper.scss" scoped>
+<style src="~/assets/css/helper.scss" scoped lang="scss">
 
 </style>
 
 <script setup>
-
+  import VLazyImage from "v-lazy-image";
 
 // This will work in both `<script setup>` and `<script>`
 definePageMeta({
   layout: "custom",
+ title: 'About Page'
 });
 
+
 useHead({
-  title: 'My About',
-  // or, instead:
-  // titleTemplate: (title) => `My App - ${title}`,
-  viewport: 'width=device-width, initial-scale=1, maximum-scale=1',
-  charset: 'utf-8',
-  meta: [
-    { name: 'description', content: 'My abouts page' }
-  ],
+  title: 'About Us page',
   bodyAttrs: {
     class: 'about-page'
   },
