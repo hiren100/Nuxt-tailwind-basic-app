@@ -1,6 +1,6 @@
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
-  modules: ['@nuxtjs/tailwindcss'],
+  modules: ['@nuxtjs/tailwindcss','@kevinmarrec/nuxt-pwa'],
   build: {
     postcss: {
       postcssOptions: {
@@ -14,18 +14,9 @@ export default defineNuxtConfig({
   css: [
     "~/assets/css/main.scss",
   ],
-  buildModules: [
-    '@nuxtjs/pwa',
-  ],
   pwa: {
-    meta: {
-      title: 'My PWA',
-      author: 'Me',
-    },
-    manifest: {
-      name: 'Nuxt.js PWAs are so easy',
-      short_name: 'Nuxt.js PWA',
-      lang: 'en',
-    }, 
-  }
+    workbox: {
+      enabled: true
+    }
+  }  
 })
