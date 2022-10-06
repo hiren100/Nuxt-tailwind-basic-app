@@ -42,6 +42,7 @@
             <NuxtLink to="/about" class="text-gray-300 hover:bg-gray-700 hover:text-purple px-3 py-2 rounded-md text-sm font-medium">About</NuxtLink>
             <NuxtLink to="/contact" class="text-gray-300 hover:bg-gray-700 hover:text-purple px-3 py-2 rounded-md text-sm font-medium">Contact</NuxtLink>
             <NuxtLink to="/blog" class="text-gray-300 hover:bg-gray-700 hover:text-purple px-3 py-2 rounded-md text-sm font-medium">Blog</NuxtLink>
+            <NuxtLink to="/features" class="text-gray-300 hover:bg-gray-700 hover:text-purple px-3 py-2 rounded-md text-sm font-medium">Features</NuxtLink>
           </div>
         </div>
       </div>
