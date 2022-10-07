@@ -1,6 +1,6 @@
 <template>
   <div class="text-center mt-20">
-    <h1 class="text-3xl font-normal text-green-500  cyan--text title mb-5">
+    <h1 id="" class="text-3xl font-normal text-green-500  cyan--text title mb-5">
       How to install Tailwind CSS 3 in Nuxt 3
     </h1>
    
@@ -33,6 +33,7 @@ useHead({
   }
 })
 
+
 const users = ref([])
 
 onMounted(()=>{
@@ -41,7 +42,9 @@ onMounted(()=>{
   .then(data => users.value = data)
 })
 
-const { data: users2 } = await useAsyncData('users2', () => $fetch('https://jsonplaceholder.typicode.com/users'))
+const { data: users2 } = await useAsyncData('users2', () => $fetch('https://jsonplaceholder.typicode.com/users'));
+
+
 
 </script>
 
