@@ -18,5 +18,13 @@ export default defineNuxtConfig({
     workbox: {
       enabled: true
     }
-  }  
+  },
+  pageTransition: {
+    name: 'fade',
+    mode: 'out-in' // default
+  },
+  layoutTransition: {
+    name: 'slide',
+    mode: 'out-in' // default
+  }    
 })
