@@ -34,28 +34,6 @@ function getTheme(){
   console.log('get theme')
 }
 
-definePageMeta({
-  pageTransition: {
-    name: 'rotate'
-  }
-})
-
-
   const { data: posts } = await useFetch('https://jsonplaceholder.typicode.com/posts')
 </script>
 
-<style>
-.rotate-enter-active,
-.rotate-leave-active {
-  transition: all 0.3s;
-      -webkit-transform: scale3d(1.05, 1.05, 1.05);
-    transform: scale3d(1.05, 1.05, 1.05);
-}
-.rotate-enter-from,
-.rotate-leave-to {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
-    transition: all 0.3s;
-}
-
-</style>

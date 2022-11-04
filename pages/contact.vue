@@ -60,24 +60,9 @@
       class: 'contanct-page'
     }
   }) 
-  definePageMeta({
-  pageTransition: {
-    name: 'rotate'
-  }
-})
+
+
+  onMounted(()=>{
+    
+  })  
 </script>
-
-<style>
-/* .rotate-enter-active,
-.rotate-leave-active {
-  transition: all 0.3s;
-}
-.rotate-enter-from,
-.rotate-leave-to {
-      -webkit-transform: translate3d(100%, 0, 0);
-    transform: translate3d(100%, 0, 0);
-    visibility: visible;
-      transition: all 0.3s;
-} */
-
-</style>

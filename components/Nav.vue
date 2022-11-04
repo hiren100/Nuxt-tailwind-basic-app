@@ -1,5 +1,5 @@
 <template>
-<nav class="bg-gray-800 sticky top-0 z-20">
+<nav  id="nav" class="nav-header bg-gray-800 sticky top-0 z-20">
   <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
     <div class="relative flex h-16 items-center justify-between">
       <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -60,3 +60,53 @@
   </div>
 </nav>
 </template>
+
+<script setup>
+  onMounted(()=>{
+    const body = document.body;
+    const triggerMenu = document.querySelector(".nav-header");
+    const scrollUp = "scroll-up";
+    const scrollDown = "scroll-down";
+    let lastScroll = 0;
+
+    triggerMenu.addEventListener("click", () => {
+      body.classList.toggle("menu-open");
+    });
+ 
+
+    window.addEventListener("scroll", () => {
+      const currentScroll = window.pageYOffset;
+      if (currentScroll <= 0) {
+        body.classList.remove(scrollUp);
+        return;
+      }
+
+      if (currentScroll > lastScroll && !body.classList.contains(scrollDown)) {
+        // down
+        body.classList.remove(scrollUp);
+        body.classList.add(scrollDown);
+      } else if (
+        currentScroll < lastScroll &&
+        body.classList.contains(scrollDown)
+      ) {
+        // up
+        body.classList.remove(scrollDown);
+        body.classList.add(scrollUp);
+      }
+      lastScroll = currentScroll;
+    });
+   
+  })  
+</script>
+
+<style>
+  .nav-header{
+    transition: transform 0.4s;
+  }
+  .scroll-down .nav-header {
+    transform: translate3d(0, -100%, 0);
+  }
+  .scroll-up .nav-header {
+    transform: none;
+  }
+</style>

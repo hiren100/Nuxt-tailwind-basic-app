@@ -1,7 +1,7 @@
 
 <template>
   <div>
-    <NuxtLink to="/features">
+    <NuxtLink to="/blog">
       <h1 class="m-4 hover:underline">Back to Home</h1>
     </NuxtLink>
     <article class="m-4 md:w-1/2 lg:w-1/3">

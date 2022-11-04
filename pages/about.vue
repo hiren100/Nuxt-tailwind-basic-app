@@ -27,24 +27,19 @@
 </template>
 
 <style src="~/assets/css/helper.scss" scoped lang="scss">
-
 </style>
 
-<script setup>
+<script setup lang="ts">
   import VLazyImage from "v-lazy-image";
 
 // This will work in both `<script setup>` and `<script>`
-definePageMeta({
-  layout: "custom",
- title: 'About Page', 
-});
 
 
 useHead({
   title: 'About Us page',
   bodyAttrs: {
     class: 'about-page'
-  },
+  }
 })
 
 

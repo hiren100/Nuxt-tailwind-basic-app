@@ -1,30 +1,18 @@
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
-  modules: ['@nuxtjs/tailwindcss','@kevinmarrec/nuxt-pwa'],
-  build: {
-    postcss: {
-      postcssOptions: {
-        plugins: {
-          tailwindcss: {},
-          autoprefixer: {},
-        },
-      },
+  modules: ['@nuxtjs/tailwindcss'],
+  app: {
+    head: {
+      charset: 'utf-16',
+      viewport: 'width=500, initial-scale=1', 
+      title: 'Nuxt 3 starter app',
+      meta: [
+        { name: 'description', content: 'My nuxt 3 stater.' }
+      ],
     },
-  },
+    pageTransition: { name: 'fade', mode: 'out-in' }
+  },    
   css: [
-    "~/assets/css/main.scss",
+    "@/assets/css/main.scss"
   ],
-  pwa: {
-    workbox: {
-      enabled: true
-    }
-  },
-  pageTransition: {
-    name: 'fade',
-    mode: 'out-in' // default
-  },
-  layoutTransition: {
-    name: 'slide',
-    mode: 'out-in' // default
-  }    
 })
