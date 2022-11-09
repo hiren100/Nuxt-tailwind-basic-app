@@ -1,6 +1,6 @@
 <template>
-<div class="flex min-h-full items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
-  <div class="w-full max-w-md space-y-8">
+<div class="min-h-full items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+  <div class="w-full max-w-md space-y-8 mx-auto">
     <div>
       <img class="mx-auto h-12 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="Your Company">
       <h2 class="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900">Contact Us</h2>
@@ -43,8 +43,56 @@
       </div>
     </form>
   </div>
+
+<div class="mouse_move">
+      <img
+        id="img1"
+        src=
+          "https://media.geeksforgeeks.org/wp-content/uploads/20210101144014/gfglogo.png"
+        class="mouse"
+        value="5"/>
+    </div>
+
+
+
+
+
+
+      <div class="tabs">
+         <button id="london" class="tablinks active" data-country="London"><p data-title="London">London</p></button>
+         <button id="paris" class="tablinks" data-country="Paris"><p data-title="Paris">Paris</p></button>
+         <button id="barcelona" class="tablinks" data-country="Barcelona"><p data-title="Barcelona">Barcelona</p></button>
+         <button id="madrid" class="tablinks" data-country="Madrid"><p data-title="Madrid">Madrid</p></button>
+         <span class="dot"></span>
+      </div>
+
+      <div class="wrapper_tabcontent">
+         <div id="London" class="tabcontent active">
+            <h3>London</h3>
+            <p>London is the capital of Great Britain. It is one of the greatest cities in the world. It is an important business and financial centre. It is an intellectual centre, too. Everywhere in London, there are open spaces: Hyde Park and Regent Park are the largest. The City is the oldest part of London. </p>
+         </div>
+
+         <div id="Paris" class="tabcontent">
+            <h3>Paris</h3>
+            <p>Paris is in the Paris department of the Paris-Isle-of-France region The French historic, political and economic capital, with a population of only 2.5 million is located in the northern part of France. One of the most beautiful cities in the world. Home to historical monuments such as Notre Dame, the Eiffel tower (320m), Bastille, Louvre and many more. </p>
+         </div>
+
+         <div id="Barcelona" class="tabcontent">
+            <h3>Barcelona</h3>
+            <p>Barcelona has been an urban laboratory since the high Medieval Ages. A place of diversity, a backdrop for a multiplicity of social and cultural processes on multiple scales that reflect different ways of constructing the future, a city with a long experience of urban life and social innovations. </p>
+         </div>
+
+         <div id="Madrid" class="tabcontent">
+            <h3>Madrid</h3>
+            <p>Madrid is in the middle of Spain, in the Community of Madrid. The Community is a large area that includes the city as well as small towns and villages outside the city. 7 million people live in the Community. More than 3 million live in the city itself. 
+            </p>
+         </div>
+      </div>      
+
+
 </div>  
 </template>
+
 
 <script setup>
   useHead({
@@ -62,7 +110,96 @@
   }) 
 
 
+
+
+
   onMounted(()=>{
-    
+     document.addEventListener("mousemove", parallax);
+      function parallax(event) {
+        this.querySelectorAll(".mouse").forEach((shift) => {
+          const position = shift.getAttribute("value");
+          const x = (window.innerWidth - event.pageX * position) / 90;
+          const y = (window.innerHeight - event.pageY * position) / 90;
+  
+          shift.style.transform = `translateX(${x}px) translateY(${y}px)`;
+        });
+      }   
+      
+     var tabLinks = document.querySelectorAll(".tablinks");
+      var tabContent = document.querySelectorAll(".tabcontent");
+
+      const tabActive = document.querySelectorAll(".indicator");
+
+
+tabLinks.forEach(function(el) {
+   el.addEventListener("click", openTabs);
+});
+
+
+function openTabs(el) {
+   var btnTarget = el.currentTarget;
+   var country = btnTarget.dataset.country;
+
+   tabContent.forEach(function(el) {
+      el.classList.remove("active");
+   });
+
+   tabLinks.forEach(function(el) {
+      el.classList.remove("active");
+   });
+ 
+
+  document.querySelector("#" + country).classList.add("active");
+   
+   btnTarget.classList.add("active");
+
+}
+ 
+
   })  
 </script>
+
+<style scoped>
+  .mouse{
+    max-width: 100px;
+  }
+
+.tabcontent {
+   display: none;
+   min-height: 180px;
+   
+}
+.tabs{
+  position: relative;
+}
+.tabcontent.active {
+    transition: all 1s ease;
+    display: block;
+}
+.dot{
+  content: "";
+  position: absolute;
+  display: flex;
+  transition: all 1s cubic-bezier(.27,.27,.86,.86);
+  padding: 4px;
+  background-color:lightskyblue;
+  z-index: 1;
+  border-radius: 99px;
+  
+}
+.active#london ~ .dot{
+  left: 0;
+   opacity: 1;
+}
+.active#paris ~ .dot{
+  left: 20%;
+  opacity: 1;
+}
+.active#barcelona ~ .dot{
+  left: 40%;
+}
+.active#madrid ~ .dot{
+  left: 60%;
+}
+
+</style>

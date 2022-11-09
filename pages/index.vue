@@ -2,11 +2,7 @@
   <div class="text-center mt-20">
     <h1 id="" class="text-3xl font-normal text-green-500  cyan--text title mb-5">
       How to install Tailwind CSS 3 in Nuxt 3
-    </h1>
-
-  <a href="" class="typewrite" data-period="2000" data-type='[ "Hi, Im Si.", "I am Creative.", "I Love Design.", "I Love to Develop." ]'>
-    <span class="wrap"></span>
-  </a>    
+    </h1>   
    
     <p class="font-bellindia text-4xl mb-5">This is lorem ipsum text</p>
     <button class="btn-primary mr-5">Submit</button>
